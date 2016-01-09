@@ -49,4 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void buttonOnClickPlus(View v) {
+        // do something when the button is clicked
+    }
+
+    public void buttonOnClickMinus(View v) {
+        // do something when the button is clicked
+    }
 }
