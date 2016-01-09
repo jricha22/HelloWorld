@@ -8,8 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private int curValue;
+
+    public MainActivity() {
+        curValue = 0;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        TextView myText = (TextView)(findViewById(R.id.txtValue));
+        myText.setText(Integer.toString(this.curValue));
     }
 
     @Override
@@ -51,10 +59,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonOnClickPlus(View v) {
-        // do something when the button is clicked
+        TextView myText = (TextView)(findViewById(R.id.txtValue));
+        myText.setText(Integer.toString(++this.curValue));
     }
 
     public void buttonOnClickMinus(View v) {
-        // do something when the button is clicked
+        TextView myText = (TextView)(findViewById(R.id.txtValue));
+        myText.setText(Integer.toString(--this.curValue));
     }
 }
